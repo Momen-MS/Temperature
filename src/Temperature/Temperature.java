@@ -46,7 +46,7 @@ public class Temperature extends Application {
         
 
         InputTF.setOnKeyReleased(new EventHandler<KeyEvent>() {
-    public void handle(KeyEvent ke) {
+        public void handle(KeyEvent ke) {
          if(!InputTF.getText().equals("")  ){
          String valueS = InputTF.getText();   
         double valueD = Double.parseDouble(valueS);
@@ -57,12 +57,9 @@ public class Temperature extends Application {
             resultL.setText("New Temperature in is: " + F);
         } else if (chose2.isSelected()) {
             double K = valueD + 273.15;
-
             resultL.setText("New Temperature in is: " + K);
-        }
-       
-        }else resultL.setText("Plese Enter value");
-            
+        }       
+        }else resultL.setText("Plese Enter value");   
     }
         }
         );
@@ -70,40 +67,27 @@ public class Temperature extends Application {
         
         
         chose1.setOnMouseClicked(new EventHandler<MouseEvent>() {
-    public void handle(MouseEvent me) {
-         if(!InputTF.getText().equals("")  ){
+         public void handle(MouseEvent me) {   
+         if(!InputTF.getText().equals("")){
          String valueS = InputTF.getText();   
         double valueD = Double.parseDouble(valueS);
-        
-
         if (chose1.isSelected()) {
             double F = valueD * 9 / 5 + 32 ;
             resultL.setText("New Temperature in is: " + F);
-        } else if (chose2.isSelected()) {
-            double K = valueD + 273.15;
-
-            resultL.setText("New Temperature in is: " + K);
-        }
-       
+        } 
+        
         }else resultL.setText("Plese Enter value");
             
     }
         }
         );
-        
-        
-        
+
         chose2.setOnMouseClicked(new EventHandler<MouseEvent>() {
-    public void handle(MouseEvent me) {
+        public void handle(MouseEvent me) {
          if(!InputTF.getText().equals("")  ){
          String valueS = InputTF.getText();   
         double valueD = Double.parseDouble(valueS);
-        
-
-        if (chose1.isSelected()) {
-            double F = valueD * 9 / 5 + 32 ;
-            resultL.setText("New Temperature in is: " + F);
-        } else if (chose2.isSelected()) {
+        if (chose2.isSelected()) {
             double K = valueD + 273.15;
 
             resultL.setText("New Temperature in is: " + K);
@@ -131,65 +115,3 @@ public class Temperature extends Application {
     }
     
 }
-//         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() { 
-//            public void handle(ActionEvent e) 
-//            { 
-//                if(!InputTF.getText().equals("")  ){
-//         String valueS = InputTF.getText();   
-//        double valueD = Double.parseDouble(valueS);
-//        
-//
-//        if (chose1.isSelected()) {
-//            double F = valueD * 9 / 5 + 32 ;
-//            resultL.setText("New Temperature in is: " + F);
-//        } else if (chose2.isSelected()) {
-//            double K = valueD + 273.15;
-//
-//            resultL.setText("New Temperature in is: " + K);
-//        }
-//       
-//        }else resultL.setText("Plese Enter value");
-//            } 
-//        }; 
-//         InputTF.setOnAction(event);
-//while(InputTF.getText().equals(null) && InputTF.getText().equals("0") ){
-//    String valueS = InputTF.getText();
-//    double valueD = Double.parseDouble(valueS);
-//    if (chose1.isSelected()) {
-//            double F = valueD * 9 / 5 + 32 ;
-//            resultL.setText("New Temperature in is: " + F);
-//        } else if (chose2.isSelected()) {
-//            double K = valueD + 273.15;
-//
-//            resultL.setText("New Temperature in is: " + K);
-//
-//}
-//}  
-//        
-//        String xe = "";
-//        int x = 0 ;
-//        for (int i = 0;!InputTF.getText().equals(null) || !xe.equals(InputTF.getText()) ; i++) 
-//            
-//        
-//{
-//       
-            
-//        if(!InputTF.getText().equals(null) || !xe.equals(InputTF.getText()) ){
-//         String valueS = InputTF.getText();   
-//        double valueD = Double.parseDouble(valueS);
-//        
-////        double F = valueD * 9 / 5 + 32;
-////        double K = valueD + 273.15;
-//        
-//        if (chose1.isSelected()) {
-//            double F = valueD * 9 / 5 + 32 ;
-//            resultL.setText("New Temperature in is: " + F);
-//        } else if (chose2.isSelected()) {
-//            double K = valueD + 273.15;
-//
-//            resultL.setText("New Temperature in is: " + K);
-//        }
-//        xe = InputTF.getText();
-//        }
-        
-//        }
